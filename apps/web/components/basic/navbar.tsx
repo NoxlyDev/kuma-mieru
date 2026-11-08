@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Button,
   Navbar as HeroUINavbar,
   Input,
   Kbd,
@@ -18,7 +17,7 @@ import Image from 'next/image';
 import NextLink from 'next/link';
 import { useCallback, useEffect, useRef } from 'react';
 
-import { GithubIcon, SearchIcon } from '@/components/basic/icons';
+import { SearchIcon } from '@/components/basic/icons';
 import { ThemeSwitch } from '@/components/basic/theme-switch';
 import { buildIconProxyUrl } from '@/utils/icon-proxy';
 import { motion } from 'framer-motion';
@@ -167,9 +166,6 @@ export const Navbar = () => {
         <NavbarItem className="hidden lg:block">
           <div className="flex flex-col">{searchInput}</div>
         </NavbarItem>
-        <NavbarItem className="hidden sm:block">
-          {pageConfig.isShowStarButton && starButton}
-        </NavbarItem>
       </NavbarContent>
 
       {/* 移动端 */}
@@ -200,7 +196,6 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu className="z-60">
-        {pageConfig.isShowStarButton && starButton}
         <div className="flex flex-col gap-4">{searchInput}</div>
         <div className="mx-4 mt-4 flex flex-col gap-2" aria-label={t('navbar.mobileNav')}>
           {navItems.map((item, index) => {
