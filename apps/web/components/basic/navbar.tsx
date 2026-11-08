@@ -105,19 +105,6 @@ export const Navbar = () => {
     </div>
   );
 
-  const starButton = (
-    <Button
-      isExternal
-      as={Link}
-      className="text-sm font-normal text-default-600 bg-default-100"
-      href="https://github.com/Alice39s/kuma-mieru"
-      startContent={<GithubIcon />}
-      variant="flat"
-    >
-      Star on Github
-    </Button>
-  );
-
   const getIconUrl = () => buildIconProxyUrl(pageConfig.pageId) || '/icon.svg';
   const navItems = [
     {
